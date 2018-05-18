@@ -3,9 +3,8 @@ extends ../layout
 block content
     h1= title
     p= body
-    form(method='GET' action='/login')
-        button.btn.btn-primary(type='submit') Connexion
-
-    form(method='GET' action='/register')
-        button.btn.btn-primary(type='submit') Enregistrement
+    p
+        a.btn.btn-primary(href='/login') Connexion
+    p
+        a.btn.btn-primary(href='/register') Enregistrement
 
