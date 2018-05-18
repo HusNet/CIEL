@@ -14,9 +14,11 @@ module.exports = function(app, router) {
     });
 
     //login form route
-    let loginform = require('../app/controllers/login_ctrl');
     router.get('/login', function(req, res, next) {
-        loginform.login(req, res, next);
+        login.login(req, res, next);
+    });
+    router.post('/login', function(req, res, next) {
+       login.login_do(req, res, next);
     });
 
     //register form route

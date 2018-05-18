@@ -8,6 +8,12 @@ exports.index = function(req, res, next) {
 
 };
 
+/**
+ * Login form
+ * @param req
+ * @param res
+ * @param next
+ */
 exports.login = function(req, res, next) {
 
     res.render('login/login', {
@@ -15,6 +21,22 @@ exports.login = function(req, res, next) {
         body: 'Veuillez entrer votre numéro de téléphone'
     });
 
+};
+
+exports.login_do = function(req, res, next) {
+    console.log(req.body.phone);
+
+    // check if phone number exists in database
+
+    // generate sms code
+
+    // save sms code in db
+
+    // send code by sms to phone number
+
+    // redirect to code page
+
+    res.redirect('/login');
 };
 
 exports.register = function(req, res, next) {
