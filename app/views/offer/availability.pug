@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1= title
+    p= body
+
+    div(class='input-field')
+        textarea.materialize-textarea(placeholder='Disponibilités', col='12')
+    p
+        a.btn.btn-primary(href='/offer/place') Suivant
+
+    hr
+
+    p
+        a.btn.btn-primary(href='/offer/title') Retour

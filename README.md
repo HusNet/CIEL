@@ -3,6 +3,8 @@ Reference : https://hack.opendata.ch/project/181</p>
 Date du Hackathon : 18.05.2018</p>
 Hôte : HES-SO Valais Wallis, Technopole, Sierre (VS) http://www.hevs.ch
 
+## Informations
+
 <i>Keywords: Circular Economy Lab Region - Valais Circular Economy Network - Réseau d'échange dans une démarche d'économie circulaire </i>
 
 
@@ -41,3 +43,37 @@ Tiré d’un réel cas réalisé au Parc de Finges (VS).
 Des arbres fruitiers abandonnés ont été identifiés (ressource inexploitée). Le Parc de Finges s’est interrogé sur les solutions pour éviter la perte des fruits ? (besoin 1)
 
 Il a ensuite identifié des écoliers et des personnes en situation de handicap qui cherchent à faire des sorties éducatives ou de loisirs (besoin 2), qui étaient d’accord pour ramasser les fruits. Ensuite, il a fait livrer les fruits à un cuisinier de la commune, qui a produit des confitures, et qui ont été mises sur le marché.
+
+
+## Documentation technique
+
+Documentation technique pour la mise en ligne du projet CIEL.
+
+### Prérequis
+
+Ce projet utilise **node.js** et le moteur de base de données **MongoDb**.
+`pm2` est utilisé pour gérer le processus de l'application sur le serveur
+
+- Installation de [node.js](https://nodejs.org/en/download/package-manager/)
+- Installation de [mongodb](https://docs.mongodb.com/manual/installation/)
+- Installation de [pm2](http://pm2.keymetrics.io/)
+
+### Mise en ligne
+
+1. Uploader le code source sur le serveur
+
+2. Se déplacer dans le dossier du projet
+    ```
+    cd /.../ciel
+    ```
+    
+2. Installer les dépendences node.js
+    ```
+    npm install
+    ```
+
+3. Lancer l'application
+    ```
+    pm2 start ciel.js
+    ```
+

@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1= title
+    p= body
+
+    div(class='input-field')
+        input(type='text', placeholder='Title', id="autocomplete-input", class='autocomplete')
+
+    p
+        a.btn.btn-primary(href='/offer/availability') Suivant
+
+    hr
+
+    p
+        a.btn.btn-primary(href='/offer/picture') Retour

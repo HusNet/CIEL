@@ -55,4 +55,25 @@ module.exports = function(app, router) {
     router.get('/offer', function (req, res, next) {
         offer.index(req, res, next);
     });
+    router.get('/offer/category/:id', function (req, res, next) {
+        offer.category(req, res, next);
+    });
+    router.get('/offer/picture', function (req, res, next) {
+        offer.picture(req, res, next);
+    });
+    router.get('/offer/title', function (req, res, next) {
+        offer.title(req, res, next);
+    });
+    router.get('/offer/availability', function (req, res, next) {
+        offer.availability(req, res, next);
+    });
+    router.get('/offer/place', function (req, res, next) {
+        offer.place(req, res, next);
+    });
+    router.get('/offer/price', function (req, res, next) {
+        offer.price(req, res, next);
+    });
+    router.get('/offer/finish', function (req, res, next) {
+        offer.finish(req, res, next);
+    });
 };
