@@ -57,23 +57,42 @@ Ce projet utilise **node.js** et le moteur de base de données **MongoDb**.
 - Installation de [node.js](https://nodejs.org/en/download/package-manager/)
 - Installation de [mongodb](https://docs.mongodb.com/manual/installation/)
 - Installation de [pm2](http://pm2.keymetrics.io/)
+- Installation de [ruby](https://www.ruby-lang.org/fr/)
+- Installation de [compass](http://www.rubycompass.com/)
 
 ### Mise en ligne
 
-1. Uploader le code source sur le serveur
+1. Cloner le code source sur le serveur
+    ```
+    git clone git@github.com:R-Men/CIEL.git
+    ```
 
-2. Se déplacer dans le dossier du projet
+1. Configurer la base de donnée MongoDb selon le fichier
+    ```
+    /assets/mongo_db_creation.txt
+    ```
+
+1. Se déplacer dans le dossier du projet
     ```
     cd /.../ciel
     ```
-    
-2. Installer les dépendences node.js
+
+1. Installer les dépendences node.js
     ```
     npm install
     ```
 
-3. Lancer l'application
+1. Lancer l'application via le gestionnaire de processus Node
     ```
     pm2 start ciel.js
     ```
+
+1. Contrôlez le bon déroulement de l'application
+    ```
+    pm2 logs ciel.js
+    ```
+
+### Demo live du prototype de l'app
+
+La démonstration est disponible sur ce lien : [Plateforme CIEL](http://ciel.r-men.ch).
 

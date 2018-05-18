@@ -4,7 +4,6 @@
 use dbciel_dev
 
 
-
 // create user
 db.createUser(
   {
@@ -19,7 +18,6 @@ db.createUser(
 // auth
 db.auth("app", "unlucky")
 
-
 // create collections
 db.createCollection("clients")
 
@@ -29,19 +27,19 @@ db.createCollection("offers")
 
 
 
-// insert a client
+// example to insert a client
 db.clients.insert({
-	"firstname" : "Sylvain",
-	"lastname" : "Roh",
-	"phone" : "+41774539943",
+	"firstname" : "Your firstname",
+	"lastname" : "Your lastname",
+	"phone" : "+417xxxxxxxx",
 	"code" : undefined,
-	"defaultAddress" : 0,
+	"defaultAddress" : "home",
 	"addresses" : [
 		{
-			"name": "Sylvain Roh",
-			"street": "Rue des Sports 20",
-			"npa": "1963",
-			"city": "Vétroz"
+			"name": "home",
+			"street": "Your street",
+			"npa": "Your NPA",
+			"city": "Your city"
 		}
 	]
 })
