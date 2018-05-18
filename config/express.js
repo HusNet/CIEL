@@ -1,4 +1,4 @@
-let
+var
     express = require('express'),
     cookieParser = require('cookie-parser'),
     bodyParser = require('body-parser'),
@@ -14,7 +14,7 @@ module.exports = function(app, config) {
     app.set('views', config.root + '/app/views');
     app.set('view engine', 'pug');
 //    app.use(favicon(config.root + '/public/images/favicon.ico'));
-    app.use(express.static(config.root + '/public'));
+    app.use('/public', express.static(config.root + '/public'));
     app.use(compress());
     app.use(logger('dev'));
     app.use(cookieParser());
