@@ -3,7 +3,6 @@ node.js
 
 ajouter C:\Users\rohs\AppData\Roaming\npm au PATH
 
-> npm install -g bower
 > npm install -g grunt
 
 Installer Ruby : https://rubyinstaller.org/
