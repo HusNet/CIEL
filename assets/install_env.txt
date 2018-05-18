@@ -1,0 +1,19 @@
+Install
+node.js
+
+ajouter C:\Users\rohs\AppData\Roaming\npm au PATH
+
+> npm install -g bower
+> npm install -g grunt
+
+Installer Ruby : https://rubyinstaller.org/
+Installer compass
+> gem install compass
+
+
+
+run project : 
+
+> npm install
+> bower install
+> grunt
