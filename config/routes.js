@@ -14,16 +14,15 @@ module.exports = function(app, router) {
     });
 
     //login form route
-    let loginform = require('../app/controllers/login_ctrl');
     router.get('/login', function(req, res, next) {
-        loginform.login(req, res, next);
+        login.login(req, res, next);
     });
 
     //register form route
-    let register = require('../app/controllers/login_ctrl');
     router.get('/register', function(req, res, next) {
-        register.register(req, res, next);
+        login.register(req, res, next);
     });
+
 
     //home route
     let home = require('../app/controllers/home_ctrl');
