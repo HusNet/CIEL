@@ -1,0 +1,32 @@
+use dbciel
+
+
+db.createUser(
+  {
+    user: "app",
+    pwd: "unlucky",
+    roles: [
+       { role: "readWrite", db: "dbciel" }
+    ]
+  }
+)
+
+db.createUser(
+  {
+    user: "r-men",
+    pwd: "unlucky",
+    roles: [
+       { role: "readWrite", db: "dbciel" }
+    ]
+  }
+)
+
+db.createUser(
+  {
+    user: "shaolin",
+    pwd: "unlucky",
+    roles: [
+       { role: "readWrite", db: "dbciel" }
+    ]
+  }
+)
