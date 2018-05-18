@@ -25,12 +25,10 @@ module.exports = function(app, router) {
         register.register(req, res, next);
     });
 
-
     //home route
     let home = require('../app/controllers/home_ctrl');
     router.get('/home', function(req, res, next) {
         home.index(req, res, next);
     });
-
 
 };
