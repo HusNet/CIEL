@@ -7,9 +7,28 @@ module.exports = function(app, router) {
         });
     });
 
-    //home route
-    var home = require('../app/controllers/home_ctrl');
+    //login route
+    let login = require('../app/controllers/login_ctrl');
     router.get('/', function(req, res, next) {
+        login.index(req, res, next);
+    });
+
+    //login form route
+    let loginform = require('../app/controllers/login_ctrl');
+    router.get('/login', function(req, res, next) {
+        loginform.login(req, res, next);
+    });
+
+    //register form route
+    let register = require('../app/controllers/login_ctrl');
+    router.get('/register', function(req, res, next) {
+        register.register(req, res, next);
+    });
+
+
+    //home route
+    let home = require('../app/controllers/home_ctrl');
+    router.get('/home', function(req, res, next) {
         home.index(req, res, next);
     });
 

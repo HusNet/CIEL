@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    .main.container
+        .row
+            .col-md-6.col-md-offset-3
+                h1.display-4.m-b-2 Sign Up
+
+                // register form
+                form(method='POST' action='/register')
+                    div.form-group
+                        label(for='firstname') Prénom:
+                        input#firstname.form-control(type='text', placeholder='Votre prénom' name='firstname' required)
+                    div.form-group
+                        label(for='lastname') Nom:
+                        input#lastname.form-control(type='text', placeholder='Votre nom' name='lastname' required)
+                    div.form-group
+                        label(for='telephone') Numéro de téléphone:
+                        input#telephone.form-control(type='tel', placeholder='+417x xxx xx xx' name='telephone' required)
+                    div.form-group
+                        label(for='address') Adresse:
+                        input#address.form-control(type='text', placeholder='Rue et numéro' name='address' required)
+                    div.form-group
+                        label(for='npa') NPA:
+                        input#npa.form-control(type='text' placeholder='NPA' name='npa' required)
+                    div.form-group
+                        label(for='city') NPA:
+                        input#city.form-control(type='text' placeholder='Ville' name='city' required)
+                    div.form-group
+                    button.btn.btn-primary(type='submit') Sign up
