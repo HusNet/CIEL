@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1= title
+    p= body
+    p Catégorie :
+        p
+            a.btn.btn-primary(href='/offer/title') Choisir une image
+
+        p
+            a.btn.btn-primary(href='/offer/title') Passer
+
+        hr
+
+        p
+            a.btn.btn-primary(href='/offer/category/1') Retour
