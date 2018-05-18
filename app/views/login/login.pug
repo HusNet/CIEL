@@ -6,6 +6,9 @@ block content
             .col-md-6.col-md-offset-3
                 h1.display-4.m-b-2 Se connecter
 
+                if hasError
+                    div.card-panel.red= errorMessage
+
                 // login form
                 form(method='POST' action='/login')
                     div.form-group

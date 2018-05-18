@@ -27,3 +27,21 @@ db.createCollection("categories")
 
 db.createCollection("offers")
 
+
+
+// insert a client
+db.clients.insert({
+	"firstname" : "Sylvain",
+	"lastname" : "Roh",
+	"phone" : "+41774539943",
+	"code" : undefined,
+	"defaultAddress" : 0,
+	"addresses" : [
+		{
+			"name": "Sylvain Roh",
+			"street": "Rue des Sports 20",
+			"npa": "1963",
+			"city": "Vétroz"
+		}
+	]
+})
