@@ -1,0 +1,87 @@
+{
+  "clients" : [
+    {
+      "firstname" : "",
+      "lastname" : "",
+      "phone" : "",
+      "defaultAddress" : "maison",
+      "addresses" : [
+        {
+          "name": "maison",
+          "street": "",
+          "npa": "",
+          "city": ""
+        },
+        {
+          "name": "garage",
+          "street": "",
+          "npa": "",
+          "city": ""
+        }
+      ]
+    },
+    {
+      "firstname" : "",
+      "lastname" : "",
+      "phone" : "",
+      "defaultAddress" : "maison",
+      "addresses" : [
+        {
+          "name": "maison",
+          "street": "",
+          "npa": "",
+          "city": ""
+        },
+        {
+          "name": "garage",
+          "street": "",
+          "npa": "",
+          "city": ""
+        }
+      ]
+    }
+  ],
+
+  "categories" : [
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    },
+    {
+      "title" : "",
+      "parent" : "category id | null"
+    }
+  ]
+}
