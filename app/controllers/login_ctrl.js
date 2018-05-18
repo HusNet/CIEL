@@ -1,4 +1,7 @@
 
+var mongoose = require('mongoose'),
+    clients = mongoose.model('clients');
+
 exports.index = function(req, res, next) {
 
     res.render('login/index', {
@@ -19,19 +22,46 @@ exports.login = function(req, res, next) {
 };
 
 exports.login_do = function(req, res, next) {
-    console.log(req.body.phone);
-    
+    let phone = req.body.phone;
+    let session = req.session;
+    console.log(phone);
+
     // check if phone number exists in database
+    const query = clients.findOne({phone: phone}).exec();
+    query.then(function(client){
 
-    // generate sms code
+        if(client == null){
 
-    // save sms code in db
+            res.render('login/error', {
 
-    // send code by sms to phone number
+                title: 'Erreur lors de la connexion',
+                errorMessage:  'Ce numéro de téléphone n\'existe pas'
+            });
 
-    // redirect to code page
+        }
+        else{
+            session.clientId = client._id;
+            console.log(client);
+            // generate sms code
+            let smsCode = Math.floor(Math.random() * Math.floor(5000)) + 1000;
+            console.log(smsCode);
 
-    res.redirect('/login/code');
+            client.code = smsCode;
+            client.save(function(err){
+                if(err)
+                    console.log(err);
+            });
+            console.log('client updated ...');
+            res.redirect('/login/code');
+
+        }
+
+    });
+
+    query.catch(function(err){
+       console.log(err);
+    });
+
 };
 
 exports.code = function(req, res, next) {
@@ -42,9 +72,54 @@ exports.code = function(req, res, next) {
 };
 
 exports.code_do = function(req, res, next) {
+    let smsCode = req.body.code;
+    let session = req.session;
+    let clientId = session.clientId;
+
+
+    console.log(clientId);
+
     console.log(req.body.code);
 
     // verify code
+    const query = clients.findOne({_id: clientId}).exec();
+    query.then(function(client){
+
+        if(client == null){
+
+            res.render('login/error', {
+
+                title: 'Erreur lors de la connexion',
+                errorMessage:  'Ce numéro de téléphone n\'existe pas'
+            });
+
+        }
+        else{
+            console.log(client);
+            // generate sms code
+
+            console.log(smsCode);
+            if(smsCode === client.code){
+                session.logged = true;
+
+                res.redirect('/');
+            }
+            else{
+
+                res.render('login/error', {
+
+                    title: 'Erreur lors de la connexion',
+                    errorMessage:  'Mauvais code !'
+                });
+            }
+
+        }
+
+    });
+
+    query.catch(function(err){
+        console.log(err);
+    });
 
     // start session
 

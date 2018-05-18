@@ -6,15 +6,15 @@
       "lastname" : "",
       "phone" : "",
       "code" : 0,
-      "addresses" : {
-        "id" : {
+      "defaultAddress" : "address id",
+      "addresses" : [
+        {
           "name": "",
           "street": "",
           "npa": "",
           "city": ""
         }
-      },
-      "defaultAddress" : "address id"
+      ]
     }
   ],
 
