@@ -2,12 +2,9 @@ extends ../layout
 
 block content
     h1= title
-    p= body
+
     p
-        a.btn.btn-primary(href='#') Cat 1
-    p
-        a.btn.btn-primary(href='#') Cat 2
-    p
-        a.btn.btn-primary(href='#') Cat 3
-    p
-        a.btn.btn-primary(href='#') Cat 4
+        if categories.length > 0
+            each category, index in categories
+                p
+                    a.btn.btn-primary(href='/search/subcategories/' + category._id)= category.title

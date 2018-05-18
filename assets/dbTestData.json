@@ -1,42 +1,42 @@
 {
   "clients" : [
     {
-      "firstname" : "",
-      "lastname" : "",
-      "phone" : "",
+      "firstname" : "Mehdi",
+      "lastname" : "Pillet",
+      "phone" : "+41798493456",
       "defaultAddress" : "maison",
       "addresses" : [
         {
           "name": "maison",
-          "street": "",
-          "npa": "",
-          "city": ""
+          "street": "Rue de l’Eglise 8",
+          "npa": "1950",
+          "city": "Sion"
         },
         {
           "name": "garage",
-          "street": "",
-          "npa": "",
-          "city": ""
+          "street": "Route du Mayen 9",
+          "npa": "3960",
+          "city": "Sierre"
         }
       ]
     },
     {
-      "firstname" : "",
-      "lastname" : "",
-      "phone" : "",
+      "firstname" : "Rodrigo",
+      "lastname" : "Dos Santos Carreira",
+      "phone" : "+41798370783",
       "defaultAddress" : "maison",
       "addresses" : [
         {
           "name": "maison",
-          "street": "",
-          "npa": "",
-          "city": ""
+          "street": "Grand-rue 67",
+          "npa": "1904",
+          "city": "Vernayaz"
         },
         {
           "name": "garage",
-          "street": "",
-          "npa": "",
-          "city": ""
+          "street": "Route du Moulins 12",
+          "npa": "1913",
+          "city": "Saillon"
         }
       ]
     }
@@ -44,44 +44,72 @@
 
   "categories" : [
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Alimentation",
+      "parent" : null
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Fruits et légumes",
+      "parent" : "Alimentation"
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Ressources animales",
+      "parent" : "Alimentation"
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Services",
+      "parent" : null
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Stockage",
+      "parent" : "Services"
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Travail (main d’œuvre)",
+      "parent" : "Services"
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Transformation",
+      "parent" : "Services"
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Autres",
+      "parent" : "Services"
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Déchets",
+      "parent" : null
     },
     {
-      "title" : "",
-      "parent" : "category id | null"
+      "title" : "Bétail",
+      "parent" : null
+    },
+    {
+      "title" : "Vente",
+      "parent" : "Bétail"
+    },
+    {
+      "title" : "Nourriture",
+      "parent" : "Bétail"
+    },
+    {
+      "title" : "Autres",
+      "parent" : "Bétail"
+    },
+    {
+      "title" : "Machines et véhicules",
+      "parent" : null
+    },
+    {
+      "title" : "Machines agricoles",
+      "parent" : "Machines et véhicules"
+    },
+    {
+      "title" : "Outillage",
+      "parent" : "Machines et véhicules"
+    },
+    {
+      "title" : "Véhicules",
+      "parent" : "Machines et véhicules"
     }
   ]
 }

@@ -43,6 +43,9 @@ module.exports = function(app, router) {
     router.get('/search/categories', function (req, res, next) {
         search.categories(req, res, next);
     });
+    router.get('/search/subcategories/:id', function (req, res, next) {
+        search.subCategories(req, res, next);
+    });
     router.get('/search/map', function (req, res, next) {
         search.maps(req, res, next);
     });
