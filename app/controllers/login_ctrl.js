@@ -41,7 +41,9 @@ exports.login_do = function(req, res, next) {
         }
         else{
             session.clientId = client._id;
+            session.save();
             console.log(client);
+            console.log(session.clientId);
             // generate sms code
             let smsCode = Math.floor(Math.random() * Math.floor(5000)) + 1000;
             console.log(smsCode);
@@ -75,7 +77,6 @@ exports.code_do = function(req, res, next) {
     let smsCode = req.body.code;
     let session = req.session;
     let clientId = session.clientId;
-
 
     console.log(clientId);
 

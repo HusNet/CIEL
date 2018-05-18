@@ -21,7 +21,7 @@ module.exports = function(app, config) {
     app.use(session({
         key: 'sid',
         secret: 'shhhhh, this is secret',
-        resave: false,
+        resave: true,
         saveUninitialized: true,
         cookie: {
             secure: true,
