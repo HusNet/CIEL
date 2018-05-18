@@ -1,0 +1,46 @@
+{
+  "clients" : [
+    {
+      "id" : 0,
+      "firstname" : "",
+      "lastname" : "",
+      "phone" : "",
+      "addresses" : {
+        "id" : {
+          "name": "",
+          "street": "",
+          "npa": "",
+          "city": ""
+        }
+      },
+      "defaultAddress" : "address id"
+    }
+  ],
+
+  "categories" : [
+    {
+      "id" : 0,
+      "title" : "",
+      "pictogram" : "url",
+      "parent" : "category id | null"
+    }
+  ],
+
+  "offers" : [
+    {
+      "id": 0,
+      "client": "client id",
+      "categoryId": 0,
+      "image": [
+        "url ? url : category pictogram"
+      ],
+      "title": "",
+      "address": "address id",
+      "availability": {
+        "type": "unique | recurrent",
+        "remarks" : ""
+      },
+      "price" : ""
+    }
+  ]
+}
