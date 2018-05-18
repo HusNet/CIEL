@@ -1,9 +1,22 @@
 // install mongodb on windows : https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
 
 // create the database
-use dbciel
+use dbciel_dev
+
+
 
 // create user
+db.createUser(
+  {
+    user: "app",
+    pwd: "unlucky",
+    roles: [
+       { role: "readWrite", db: "dbciel" }
+    ]
+  }
+)
+
+// auth
 db.auth("app", "unlucky")
 
 
@@ -13,3 +26,4 @@ db.createCollection("clients")
 db.createCollection("categories")
 
 db.createCollection("offers")
+
