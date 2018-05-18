@@ -1,17 +1,24 @@
 {
   "requires": true,
-  "name": "CIEL",
+  "name": "ciel",
   "author": "",
   "version": "0.0.1",
   "description": "Circular Economy Lab Network project for Agricathon 2018 - Réseau d'échange de produits ou matériels agricoles",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R-Men/CIEL.git"
+  },
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/R-Men/CIEL/issues"
+  },
+  "homepage": "https://github.com/R-Men/CIEL#readme",
   "main": "ciel.js",
   "scripts": {
     "start": "node ciel.js"
   },
-  "reposotpry": {
-    "type": "GitHub",
-    "url": "git@github.com:R-Men/CIEL.git"
-  },
   "dependencies": {
-  }
+    "mongodb": "^3.1.0-beta4"
+  },
+  "devDependencies": {}
 }
