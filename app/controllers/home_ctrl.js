@@ -6,19 +6,3 @@ exports.index = function(req, res, next) {
     });
 
 };
-
-exports.search = function(req, res, next) {
-
-    res.render('search/index', {
-        title: 'Recherche',
-    });
-
-};
-
-exports.offer = function(req, res, next) {
-
-    res.render('offer/index', {
-        title: 'Enregistrer votre offre',
-    });
-
-};

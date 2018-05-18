@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    h1= title
+    p= body
+    div(class='input-field')
+        i(class='material-icons prefix') search
+        input(type='text', placeholder='Recherche', id="autocomplete-input", class='autocomplete')
+
+    p
+        a.btn.btn-primary(href='/search/categories') Catégories
+
+    p
+        a.btn.btn-primary(href='/search/map') Afficher tout
+
+
