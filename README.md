@@ -64,7 +64,7 @@ Ce projet utilise **node.js** et le moteur de base de données **MongoDb**.
 
 2. Se déplacer dans le dossier du projet
     ```
-        cd /.../ceil
+    cd /.../ciel
     ```
     
 2. Installer les dépendences node.js
