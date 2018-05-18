@@ -1,18 +1,17 @@
 extends ../layout
 
 block content
-    h1= title
     p= body
 
-    div#map
+    div(id='map', style='width:100%; height:500px;')
 
     script.
         function initMap() {
-            console.log('Showing map...');
             var valais = {lat: 46.255, lng: 7.344};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: valais
+                zoom: 9,
+                center: valais,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             });
             var marker = new google.maps.Marker({
                 position: valais,
@@ -20,5 +19,5 @@ block content
             });
         }
 
-    script(async defer src='https://maps.googleapis.com/maps/api/js?key=' + 'AIzaSyBxW2lC6DY5YVivPOYzCY9e715DsqtW0fE' + '&callback=initMap()')
+    script(async defer src='https://maps.googleapis.com/maps/api/js?key=' + key + '&v=3.exp&callback=initMap')
 

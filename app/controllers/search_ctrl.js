@@ -1,3 +1,5 @@
+let API_KEY = require('../../config/secretConfig');
+
 exports.index = function(req, res, next) {
 
     res.render('search/index', {
@@ -17,7 +19,7 @@ exports.categories = function(req, res, next) {
 exports.maps = function(req, res, next) {
 
     res.render('search/map', {
-
+        key: API_KEY,
     });
 
 };
