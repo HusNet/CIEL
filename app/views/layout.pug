@@ -3,14 +3,25 @@ html(lang='en')
     head
         meta(charset='UTF-8')
         meta(name='viewport', content='width=device-width')
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+
         title= title + ' - CIEL'
         block css
-            link(href='/public/css/materialize.min.css')
+            link(href='/public/css/materialize.min.css', rel='stylesheet')
 
         block jsHead
 
     body
-        block content
+
+        nav
+            div(class='nav-wrapper')
+                a(href='#', class='brand-logo') Logo
+                ul(id='nav-mobile', class='right hide-on-med-and-down')
+                    li
+                        a(href='home') Home
+
+        div(class='container')
+            block content
 
 
         block jsBody
