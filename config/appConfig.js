@@ -2,7 +2,7 @@ let path = require('path'),
     rootPath = path.normalize(__dirname + '/..'),
     env = process.env.NODE_ENV || 'development';
 
-let db_dev = 'mongodb://localhost/dbciel_dev';
+let db_dev = 'mongodb://localhost/dbciel';
 let db_prod = 'mongodb://localhost/dbciel_prod';
 
 let config = {

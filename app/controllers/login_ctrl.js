@@ -8,15 +8,10 @@ exports.index = function(req, res, next) {
 
 };
 
-/**
- * Login form
- * @param req
- * @param res
- * @param next
- */
 exports.login = function(req, res, next) {
 
     res.render('login/login', {
+
         title: 'Connexion à la plateforme CIEL',
         body: 'Veuillez entrer votre numéro de téléphone'
     });
@@ -25,7 +20,7 @@ exports.login = function(req, res, next) {
 
 exports.login_do = function(req, res, next) {
     console.log(req.body.phone);
-
+    
     // check if phone number exists in database
 
     // generate sms code
@@ -36,7 +31,26 @@ exports.login_do = function(req, res, next) {
 
     // redirect to code page
 
-    res.redirect('/login');
+    res.redirect('/login/code');
+};
+
+exports.code = function(req, res, next) {
+    res.render('login/code', {
+        title: 'Autentification avec code SMS',
+        body: 'Veuillez entrer le code reçu par SMS'
+    });
+};
+
+exports.code_do = function(req, res, next) {
+    console.log(req.body.code);
+
+    // verify code
+
+    // start session
+
+    // signed in
+
+    // redirect to home
 };
 
 exports.register = function(req, res, next) {

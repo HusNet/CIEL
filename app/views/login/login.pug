@@ -4,11 +4,11 @@ block content
     .main.container
         .row
             .col-md-6.col-md-offset-3
-                h1.display-4.m-b-2 Sign Up
+                h1.display-4.m-b-2 Se connecter
 
                 // login form
                 form(method='POST' action='/login')
                     div.form-group
                         label(for='phone') Numéro de téléphone:
-                        input#telephone.form-control(type='tel', placeholder='+417x xxx xx xx' name='phone' required)
+                        input#phone.form-control(type='tel', placeholder='+417x xxx xx xx' name='phone' required)
                     button.btn.btn-primary(type='submit') Se connecter
